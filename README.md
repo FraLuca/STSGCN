@@ -1,7 +1,5 @@
 # __Space-Time-Separable Graph Convolutional Network for Pose Forecasting__ (*Accepted to ICCV '21*)
 
---------
-
 <p align="center">
 <image src="https://github.com/FraLuca/STSGCN/blob/main/pipeline-cameraready-1.png" width="600">
 </p>
@@ -16,4 +14,4 @@ In experimental evaluation on three complex, recent and large-scale benchmarks, 
 2.6\% of its parameters. We explain the results qualitatively and illustrate the graph interactions by the factored joint-joint and time-time learnt graph connections.
 
 --------
-## Code will be released soon 
+## Code will be released soon! 

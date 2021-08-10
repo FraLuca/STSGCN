@@ -1,4 +1,4 @@
-# *Space-Time-Separable Graph Convolutional Network for Pose Forecasting* (Accepted to ICCV '21)
+# __Space-Time-Separable Graph Convolutional Network for Pose Forecasting__ (*Accepted to ICCV '21*)
 
 --------
 

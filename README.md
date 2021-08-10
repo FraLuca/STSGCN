@@ -4,7 +4,7 @@
 --------
 
 <p align="center">
-<image src="https://github.com/FraLuca/STSGCN/blob/main/pipeline-cameraready.pdf" width="600">
+<image src="blob/main/pipeline-cameraready.pdf" width="600">
 </p>
 
 ### Abstract 

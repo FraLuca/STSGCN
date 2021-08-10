@@ -4,7 +4,7 @@
 --------
 
 <p align="center">
-<img src="https://github.com/ajabri/videowalk/raw/master/figs/teaser_animation.gif" width="600">
+<img src="https://github.com/FraLuca/STSGCN/blob/main/pipeline-cameraready.pdf" width="600">
 </p>
 
 ### Abstract 

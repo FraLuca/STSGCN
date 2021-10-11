@@ -16,4 +16,35 @@ Here we propose a novel Space-Time-Separable Graph Convolutional Network (STS-GC
 In experimental evaluation on three complex, recent and large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18], STS-GCN outperforms the state-of-the-art, surpassing the current best technique [Mao et al. ECCV'20] by over 32% in average in the most difficult long-term predictions, while only requiring 1.7% of its parameters. We explain the results qualitatively and illustrate the graph attention by the factored joint-joint and time-time learnt graph connections.
 </div>
 --------
+### Get the data
 
+[Human3.6m](http://vision.imar.ro/human3.6m/description.php) in exponential map can be downloaded from [here](http://www.cs.stanford.edu/people/ashesh/h3.6m.zip).
+
+[AMASS](https://amass.is.tue.mpg.de/en) from their official website..
+ 
+[3DPW](https://virtualhumans.mpi-inf.mpg.de/3DPW/) from their official website.
+
+Directory structure:
+```shell script
+amass
+|-- ACCAD
+|-- BioMotionLab_NTroje
+|-- CMU
+|-- ...
+`-- Transitions_mocap
+```
+[3DPW](https://virtualhumans.mpi-inf.mpg.de/3DPW/) from their official website.
+
+Directory structure: 
+```shell script
+3dpw
+|-- imageFiles
+|   |-- courtyard_arguing_00
+|   |-- courtyard_backpack_00
+|   |-- ...
+`-- sequenceFiles
+    |-- test
+    |-- train
+    `-- validation
+```
+Put the all downloaded datasets in ../datasets directory.

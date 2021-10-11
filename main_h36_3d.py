@@ -178,16 +178,17 @@ def test():
     n_batches+=n
   print('overall average loss in mm is: '+str(accum_loss/n_batches))
 
-if args.mode == 'train':
-  train()
-elif args.mode == 'test':
-  test()
-elif args.mode=='viz':
-   print('loading checkpoint from : '+args.model_path)
-   model.load_state_dict(torch.load(os.path.join(args.model_path,model_name)))
-   print('checkpoint loaded successfully')
-   model.eval()
-   visualize(args.input_n,args.output_n,args.visualize_from,args.data_dir,model,device,args.n_viz,args.skip_rate,args.actions_to_consider)
+
+if __name__ == '__main__':
+
+    if args.mode == 'train':
+      train()
+    elif args.mode == 'test':
+      test()
+    elif args.mode=='viz':
+       model.load_state_dict(torch.load(os.path.join(args.model_path,model_name)))
+       model.eval()
+       visualize(args.input_n,args.output_n,args.visualize_from,args.data_dir,model,device,args.n_viz,args.skip_rate,args.actions_to_consider)
 
 
 

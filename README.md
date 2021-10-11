@@ -16,10 +16,12 @@ Here we propose a novel Space-Time-Separable Graph Convolutional Network (STS-GC
 In experimental evaluation on three complex, recent and large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18], STS-GCN outperforms the state-of-the-art, surpassing the current best technique [Mao et al. ECCV'20] by over 32% in average in the most difficult long-term predictions, while only requiring 1.7% of its parameters. We explain the results qualitatively and illustrate the graph attention by the factored joint-joint and time-time learnt graph connections.
 </div>
 --------
- ### Install dependencies:
- 
- $ pip install -r requirements.txt
 
+
+ ### Install dependencies:
+```
+ $ pip install -r requirements.txt
+```
  
  ### Get the data
 
@@ -35,7 +37,7 @@ H3.6m
 `-- S11
 ```
 
-[AMASS](https://amass.is.tue.mpg.de/en) from their official website..
+[AMASS](https://amass.is.tue.mpg.de/en) from their official website.
  
 
 Directory structure:
@@ -67,36 +69,36 @@ Put the all downloaded datasets in ../datasets directory.
 The arguments for running the code are defined in [parser.py] (utils/parser.py). We have used the following commands for training the network,on different datasets and body pose representations(3D and euler angles):
  
 ```bash
- python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 
+ python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 
  ```
- ```bash
- python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 
+```bash
+ python main_h36_ang.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 16 
   ```
- ```bash
-  python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 
+```bash
+  python main_amass_3d.py --input_n 10 --output_n 25 --skip_rate 5 --joints_to_consider 18 
   ```
  
  ### Test
  To test on the pretrained model, we have used the following commands:
  ```bash
- python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 --mode test --model_path .checkpoints/CKPT_3D_H36M/h36_3d_25frames_ckpt
+ python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode test --model_path ./checkpoints/CKPT_3D_H36M
   ```
   ```bash
-  python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 --mode test --model_path .checkpoints/CKPT_ANG_H36M/h36_ang_25frames_ckpt
+  python main_h36_ang.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 16 --mode test --model_path ./checkpoints/CKPT_ANG_H36M
   ```
   ```bash
-   python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 --mode test --model_path .checkpoints/CKPT_3D_AMASS/amass_3d_25frames_ckpt
+   python main_amass_3d.py --input_n 10 --output_n 25 --skip_rate 5 --joints_to_consider 18 --mode test --model_path ./checkpoints/CKPT_3D_AMASS
   ```
 ### Visualization
  For visualizing from a pretrained model, we have used the following commands:
  ```bash
-  python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 --mode viz --model_path .checkpoints/CKPT_3D_H36M/h36_3d_25frames_ckpt --n_viz 5
+  python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 --mode viz --model_path ./checkpoints/CKPT_3D_H36M --n_viz 5
  ```
  ```bash
-  python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 --mode viz --model_path .checkpoints/CKPT_ANG_H36M/h36_ang_25frames_ckpt --n_viz 5
+  python main_h36_ang.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 16 --mode viz --model_path ./checkpoints/CKPT_ANG_H36M --n_viz 5
  ```
  ```bash
-  python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 --mode viz --model_path .checkpoints/CKPT_3D_AMASS/amass_3d_25frames_ckpt --n_viz 5
+  python main_amass_3d.py --input_n 10 --output_n 25 --skip_rate 5 --joints_to_consider 18 --mode viz --model_path ./checkpoints/CKPT_3D_AMASS --n_viz 5
  ```
 
 ### Citing
@@ -108,7 +110,7 @@ The arguments for running the code are defined in [parser.py] (utils/parser.py).
  
  ### Acknowledgments
  
- Some of our code was adapted from [HisRepsItself] (https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao] (https://github.com/wei-mao-2019)
+ Some of our code was adapted from [HisRepsItself] (https://github.com/wei-mao-2019/HisRepItself). by [Wei Mao] (https://github.com/wei-mao-2019).
  
  ### License 
  

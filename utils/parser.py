@@ -15,7 +15,6 @@ parser.add_argument('--joints_to_consider',type=int,default=22,choices=[16,18,22
 
 #ARGS FOR THE MODEL
 
-#parser.add_argument('--temporal_kernel_size',type=int,default=9,help= 'kernel for the convolution over the time dimension')
 parser.add_argument('--n_stgcnn_layers',type=int,default=9,help= 'number of stgcnn layers')
 parser.add_argument('--n_ccnn_layers',type=int,default=2,help= 'number of layers for the Coordinate-Channel Convolution')
 parser.add_argument('--n_tcnn_layers',type=int,default=4,help= 'number of layers for the Time-Extrapolator Convolution')
@@ -46,7 +45,7 @@ parser.add_argument('--use_scheduler',type=bool,default=True,help= 'use MultiSte
 parser.add_argument('--milestones',type=list,default=[15,25,35,40],help= 'the epochs after which the learning rate is adjusted by gamma')
 parser.add_argument('--gamma',type=float,default=0.1,help= 'gamma correction to the learning rate, after reaching the milestone epochs')
 parser.add_argument('--clip_grad',type=float,default=None,help= 'select max norm to clip gradients')
-parser.add_argument('--model_path',type=str,default='D:\Sapienza\seq2seq_GCN\checkpoints',help= 'directory with the models checkpoints ')
+parser.add_argument('--model_path',type=str,default='./checkpoints/CKPT_3D_H36M',help= 'directory with the models checkpoints ')
 
 
 #FLAGS FOR THE VISUALIZATION

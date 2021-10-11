@@ -5,7 +5,7 @@
  <h4> <i>Sapienza University of Rome, Italy</i></h4>
 
 <image src="https://github.com/FraLuca/STSGCN/blob/main/pipeline-cameraready-1.png" width="600">
-
+</div>
 
 <div align="center"> <h3> Abstract </h3>  </div>
 <div align="justify">

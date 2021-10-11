@@ -158,16 +158,15 @@ def test():
                 loss=mpjpe_error(all_joints_seq,sequences_predict_gt)*1000 # loss in milimeters
                 accum_loss+=loss*batch_dim
         print('overall average loss in mm is: '+str(accum_loss/n))
+if __name__ == '__main__':
 
-if args.mode == 'train':
-    train()
-elif args.mode == 'test':
-    test()
-elif args.mode == 'viz':
-    print('loading checkpoint from: '+os.path.join(args.model_path,model_name))
-    model.load_state_dict(torch.load(os.path.join(args.model_path,model_name)))
-    print('model loaded successfully')
-    model.eval()
-    visualize(args.input_n,args.output_n,args.visualize_from,args.data_dir,model,device,args.n_viz,args.skip_rate)
+    if args.mode == 'train':
+        train()
+    elif args.mode == 'test':
+        test()
+    elif args.mode == 'viz':
+        model.load_state_dict(torch.load(os.path.join(args.model_path,model_name)))
+        model.eval()
+        visualize(args.input_n,args.output_n,args.visualize_from,args.data_dir,model,device,args.n_viz,args.skip_rate)
 
 

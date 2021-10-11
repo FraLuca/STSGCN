@@ -71,6 +71,7 @@ The arguments for running the code are defined in[parser.py](utils/parser.py). W
   ```
  ```bash
   python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 
+  ```
  
  ### Test
  To test on the pretrained model, we have used the following commands:
@@ -97,3 +98,15 @@ The arguments for running the code are defined in[parser.py](utils/parser.py). W
 
 ### Citing
  If you use our code,please cite our work
+ 
+ 
+ --------------------------------------------------
+ 
+ 
+ ### Acknowledgments
+ 
+ Some of our code was adapted from [HisRepsItself] (https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao] (https://github.com/wei-mao-2019)
+ 
+ ### License 
+ 
+ Create an MIT license

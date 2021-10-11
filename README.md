@@ -16,7 +16,10 @@ Here we propose a novel Space-Time-Separable Graph Convolutional Network (STS-GC
 In experimental evaluation on three complex, recent and large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18], STS-GCN outperforms the state-of-the-art, surpassing the current best technique [Mao et al. ECCV'20] by over 32% in average in the most difficult long-term predictions, while only requiring 1.7% of its parameters. We explain the results qualitatively and illustrate the graph attention by the factored joint-joint and time-time learnt graph connections.
 </div>
 --------
+ ### Install dependencies:
  
+ $ pip install -r requirements.txt
+
  
  ### Get the data
 

@@ -16,13 +16,24 @@ Here we propose a novel Space-Time-Separable Graph Convolutional Network (STS-GC
 In experimental evaluation on three complex, recent and large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18], STS-GCN outperforms the state-of-the-art, surpassing the current best technique [Mao et al. ECCV'20] by over 32% in average in the most difficult long-term predictions, while only requiring 1.7% of its parameters. We explain the results qualitatively and illustrate the graph attention by the factored joint-joint and time-time learnt graph connections.
 </div>
 --------
-### Get the data
+ 
+ 
+ ### Get the data
 
 [Human3.6m](http://vision.imar.ro/human3.6m/description.php) in exponential map can be downloaded from [here](http://www.cs.stanford.edu/people/ashesh/h3.6m.zip).
+ 
+Directory structure: 
+```shell script
+H3.6m
+|-- S1
+|-- S5
+|-- S6
+|-- ...
+`-- S11
+```
 
 [AMASS](https://amass.is.tue.mpg.de/en) from their official website..
  
-[3DPW](https://virtualhumans.mpi-inf.mpg.de/3DPW/) from their official website.
 
 Directory structure:
 ```shell script
@@ -48,3 +59,41 @@ Directory structure:
     `-- validation
 ```
 Put the all downloaded datasets in ../datasets directory.
+
+### Train
+The arguments for running the code are defined in[parser.py](utils/parser.py). We have used the following commands for training the network,on different datasets and body pose representations(3D and euler angles):
+ 
+```bash
+ python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 
+ ```
+ ```bash
+ python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 
+  ```
+ ```bash
+  python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 
+ 
+ ### Test
+ To test on the pretrained model, we have used the following commands:
+ ```bash
+ python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 --mode test --model_path .checkpoints/CKPT_3D_H36M/h36_3d_25frames_ckpt
+  ```
+  ```bash
+  python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 --mode test --model_path .checkpoints/CKPT_ANG_H36M/h36_ang_25frames_ckpt
+  ```
+  ```bash
+   python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 --mode test --model_path .checkpoints/CKPT_3D_AMASS/amass_3d_25frames_ckpt
+  ```
+### Visualization
+ For visualizing from a pretrained model, we have used the following commands:
+ ```bash
+  python main_h36m_3d.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 22 --mode viz --model_path .checkpoints/CKPT_3D_H36M/h36_3d_25frames_ckpt --n_viz 5
+ ```
+ ```bash
+  python main_h36m_ang.py --input_n 10 output_n 25 --skip_rate 1 --joints_to_consider 16 --mode viz --model_path .checkpoints/CKPT_ANG_H36M/h36_ang_25frames_ckpt --n_viz 5
+ ```
+ ```bash
+  python main_amass_3d.py --input_n 10 output_n 25 --skip_rate 5 --joints_to_consider 18 --mode viz --model_path .checkpoints/CKPT_3D_AMASS/amass_3d_25frames_ckpt --n_viz 5
+
+
+### Citing
+ If you use our code,please cite our work

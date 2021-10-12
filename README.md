@@ -3,6 +3,9 @@
 <h1>Space-Time-Separable Graph Convolutional Network for Pose Forecasting (<b>Accepted to ICCV '21</b>)</h1>
 <h3> <i>Theodoros Sofianos†, Alessio Sampieri†, Luca Franco and Fabio Galasso</i></h3>
  <h4> <i>Sapienza University of Rome, Italy</i></h4>
+ 
+ [Paper](https://arxiv.org/abs/2110.04573)
+ 
 
 <image src="https://github.com/FraLuca/STSGCN/blob/main/pipeline-cameraready-1.png" width="600">
 </div>

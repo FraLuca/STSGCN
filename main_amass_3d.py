@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 from model import *
 from utils.ang2joint import *
 from utils.loss_funcs import mpjpe_error
-#from utils.amass_3d import *
-from utils.dpw3d import * # choose amass or 3dpw by importing the right dataset class
+from utils.amass_3d import *
+#from utils.dpw3d import * # choose amass or 3dpw by importing the right dataset class
 from utils.amass_3d_viz import visualize
 from utils.parser import args
 

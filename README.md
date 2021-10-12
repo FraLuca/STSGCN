@@ -117,8 +117,11 @@ The arguments for running the code are defined in [parser.py] (utils/parser.py).
  
  ### Acknowledgments
  
- Some of our code was adapted from [HisRepsItself] (https://github.com/wei-mao-2019/HisRepItself). by [Wei Mao] (https://github.com/wei-mao-2019).
+ Some of our code was adapted from [HisRepsItself](https://github.com/wei-mao-2019/HisRepItself) by [Wei Mao](https://github.com/wei-mao-2019).
+ 
+ The authors wish to acknowledge Panasonic for partially supporting this work and the project of the Italian Ministry of Education, Universities and Research (MIUR) “Dipartimenti di Eccellenza 2018-2022”.
+
  
  ### License 
  
- Create an MIT license
+ MIT license

@@ -105,7 +105,14 @@ The arguments for running the code are defined in [parser.py] (utils/parser.py).
  If you use our code,please cite our work
  
  ```
- --------------------------------------------------
+@misc{sofianos2021spacetimeseparable,
+      title={Space-Time-Separable Graph Convolutional Network for Pose Forecasting}, 
+      author={Theodoros Sofianos and Alessio Sampieri and Luca Franco and Fabio Galasso},
+      year={2021},
+      eprint={2110.04573},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
  ```
  
  ### Acknowledgments

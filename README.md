@@ -66,7 +66,7 @@ Directory structure:
 Put the all downloaded datasets in ../datasets directory.
 
 ### Train
-The arguments for running the code are defined in [parser.py] (utils/parser.py). We have used the following commands for training the network,on different datasets and body pose representations(3D and euler angles):
+The arguments for running the code are defined in [parser.py](utils/parser.py). We have used the following commands for training the network,on different datasets and body pose representations(3D and euler angles):
  
 ```bash
  python main_h36_3d.py --input_n 10 --output_n 25 --skip_rate 1 --joints_to_consider 22 

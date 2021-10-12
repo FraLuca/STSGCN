@@ -1,6 +1,6 @@
 
 <div align="center">
-<h1>Space-Time-Separable Graph Convolutional Network for Pose Forecasting (*Accepted to ICCV '21*)</h1>
+<h1>Space-Time-Separable Graph Convolutional Network for Pose Forecasting (<b>Accepted to ICCV '21</b>)</h1>
 <h3> <i>Theodoros Sofianos†, Alessio Sampieri†, Luca Franco and Fabio Galasso</i></h3>
  <h4> <i>Sapienza University of Rome, Italy</i></h4>
 

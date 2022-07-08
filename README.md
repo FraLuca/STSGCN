@@ -21,6 +21,40 @@ In experimental evaluation on three complex, recent and large-scale benchmarks, 
 --------
 
 
+# :warning:*Update about results and evaluation metric* [08/07/2022]
+
+A problem arises because no prior human pose forecasting work has explicitly written the test MPJPE metric. [Mao et al., 2020, Mao et al., 2019] have specified the MPJPE for the learning loss, and they have referred to the (same) MPJPE for testing, which is however different.
+
+In [Mao et al., 2020], Eq. (6), they define MPJPE as 
+
+$$MPJPE = \frac{1}{J(M+T)}\sum_{t=1}^{M+T} \sum_{j=1}^J ||\hat{\textbf{p}}_{t,j} - \textbf{p}_{t,j} ||^2,$$
+
+which sums up all errors at all frames up to the prediction T.
+
+Also in [Ionescu et al., 2014], Eq. (8), they define the MPJPE as:
+
+$$MPJPE(t) = \frac{1}{J} \sum_{j=1}^J ||\hat{\textbf{p}_{t,j} }- \textbf{p}_{t,j} ||^2,$$
+
+and they state: "For a set of frames the error is the average over the MPJPEs of all frames."
+
+We have therefore interpreted the test MPJPE to be:
+
+$$MPJPE = \frac{1}{J T}\sum_{t=M+1}^{M+T} \sum_{j=1}^J ||\hat{\textbf{p}}_{t,j} - \textbf{p}_{t,j} ||^2,$$
+
+which is implemented in our testing code. Note: coding has been done in good faith, and in good faith we have open-sourced the project here.
+
+As noted in this thread, the code provided by [Mao et al., 2020] actually considers only the target temporal horizon, not the average up to that time.
+
+Running the test code of [Mao et al., 2020], short-term (400ms) and long-term (1000ms) errors for the Human3.6M dataset for STS-GCN are:
+
+Here we report this performance and specify the test MPJPE error, to avoid future discrepancies.
+
+![image](https://user-images.githubusercontent.com/44803179/177993948-c3a67077-7369-4758-a169-f912e0d70e97.png)
+
+
+--------
+
+
  ### Install dependencies:
 ```
  $ pip install -r requirements.txt
